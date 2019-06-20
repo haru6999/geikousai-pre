@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>芸工祭告知2019</title>
+    <!-- スマホ画面の表示 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- 外部スタイルシートの読み込み -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/infiniteslide.js"></script>
+    <script src="js/jquery.pause.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <!-- pc画面での表示 -->
+      <div class="pc">
+        <p>スマートフォンでご覧ください。</p>
+      </div>
+      <!-- sp画面での表示 -->
+      <div class="sp">
+        <div class="wrap">
+
+          <div class="top">
+            <div class="topBox">
+              <img src="image/1.png" class="maru" id="maru1">
+              <img src="image/2.png" class="maru" id="maru2">
+              <img src="image/3.png" class="maru" id="maru3">
+              <img src="image/4.png" class="maru" id="maru4">
+              <img src="image/5.png" class="maru" id="maru5">
+              <img src="image/6.png" class="maru" id="maru6">
+              <img src="image/7.png" class="maru" id="maru7">
+              <img src="image/8.png" class="maru" id="maru8">
+              <!-- <img src="image/top2.png" class="top2">  -->
+              <img src="image/top.png" class="topImg"> 
+            </div>
+          </div>
+
+          <!-- 線 -->
+          <div class="line line1"></div>
+
+          <div class="contents">
+            <!-- 芸工祭とは -->
+            <div class="about toRight">
+              <img src="image/aboutImg.png">
+              <div class="box"></div>
+              <h2>芸工祭とは</h2>
+              <p>装飾に彩られたキャンパス、個性豊かな作品の展示、笑いの溢れるステージ企画に、アイデアたっぷりの模擬店。極め付けはオシャレで美味しい本格カフェ。とにかく見どころ満載で妥協のないこの学祭は芸工生全員で作る一つの作品です！満足間違いなし！</p>
+            </div>
+
+            <!-- テーマ -->
+            <div class="theme toLeft">
+              <img src="image/themeImg.png">
+              <div class="box"></div>
+              <h2>今年のテーマ</h2>
+              <h3>nomnom</h3>
+              <p>装飾に彩られたキャンパス、個性豊かな作品の展示、笑いの溢れるステージ企画に、アイデアたっぷりの模擬店。極め付けはオシャレで美味しい本格カフェ。とにかく見どころ満載で妥協のないこの学祭は芸工生全員で作る一つの作品です！満足間違いなし！</p>           
+            </div>
+
+            <!-- 線 -->
+            <div class="line line2"></div>
+
+            <!-- movie -->
+            <div class="movie">
+              <div class="movie1">
+                <video src="image/comceptweb.mp4" autoplay muted></video>
+              </div>
+              <div class="movie2">
+                <video src="image/comceptweb.mp4" autoplay muted class="movie2"></video>
+              </div>
+              <div class="text">
+                <p id="movieText">movie　movie　movie　</p>
+                
+                <script>
+                  $("#movieText").ready(function(){  
+                      var i = 0;
+                      var scroll = function(){
+                        $("#movieText").css({
+                          'transform':'matrix(1,0,0,1,'+ i +',0)'
+                        });
+                        i --;
+                      }
+                      var id = setInterval(function(){
+                        scroll();
+                        if(i ==　-225){　
+                          // clearInterval(id);  
+                          i = 0;
+                          console.log(i)
+                      }}, 15);
+                  });
+                </script>
+              </div>
+            </div>
+            
+            <!-- 線 -->
+            <div class="line line3"></div>
+
+
+            <!-- 部署長紹介 -->
+            <div class="member">
+              <img src="image/memberBack.png" class="memberBack">
+            </div>
+
+            <!-- 線 -->
+            <div class="line line4"></div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
