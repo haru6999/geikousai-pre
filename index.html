@@ -24,23 +24,27 @@
 
           <div class="top">
             <div class="topBox">
-              <img src="image/1.png" class="maru" id="maru1">
-              <img src="image/2.png" class="maru" id="maru2">
-              <img src="image/3.png" class="maru" id="maru3">
-              <img src="image/4.png" class="maru" id="maru4">
-              <img src="image/5.png" class="maru" id="maru5">
-              <img src="image/6.png" class="maru" id="maru6">
-              <img src="image/7.png" class="maru" id="maru7">
-              <img src="image/8.png" class="maru" id="maru8">
+              <div class="maruImg">
+                <img src="image/1.png" class="maru" id="maru1">
+                <img src="image/2.png" class="maru" id="maru2">
+                <img src="image/3.png" class="maru" id="maru3">
+                <img src="image/4.png" class="maru" id="maru4">
+                <img src="image/5.png" class="maru" id="maru5">
+                <img src="image/6.png" class="maru" id="maru6">
+                <img src="image/7.png" class="maru" id="maru7">
+                <img src="image/8.png" class="maru" id="maru8">
+              </div>
               <!-- <img src="image/top2.png" class="top2">  -->
               <img src="image/top.png" class="topImg"> 
             </div>
           </div>
 
-          <!-- 線 -->
-          <div class="line line1"></div>
+          
 
           <div class="contents">
+            <!-- 線 -->
+            <div class="line line1"></div>
+
             <!-- 芸工祭とは -->
             <div class="about toRight">
               <img src="image/aboutImg.png">
@@ -71,25 +75,6 @@
               </div>
               <div class="text">
                 <p id="movieText">movie　movie　movie　</p>
-                
-                <script>
-                  $("#movieText").ready(function(){  
-                      var i = 0;
-                      var scroll = function(){
-                        $("#movieText").css({
-                          'transform':'matrix(1,0,0,1,'+ i +',0)'
-                        });
-                        i --;
-                      }
-                      var id = setInterval(function(){
-                        scroll();
-                        if(i ==　-225){　
-                          // clearInterval(id);  
-                          i = 0;
-                          console.log(i)
-                      }}, 15);
-                  });
-                </script>
               </div>
             </div>
             
@@ -100,6 +85,11 @@
             <!-- 部署長紹介 -->
             <div class="member">
               <img src="image/memberBack.png" class="memberBack">
+              <!-- <img src="image/member2.png" class="member2"> -->
+              <div class="memberImgBox">
+                  <div class="memberImgDiv"><img src="image/members/1.png" class="memberImg me1"></div>
+                  <div class="memberImgDiv"><img src="image/members/2.png" class="memberImg me2"></div>
+              </div>
             </div>
 
             <!-- 線 -->

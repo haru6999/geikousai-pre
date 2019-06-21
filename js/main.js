@@ -1,8 +1,7 @@
-window.onload = function () {
-  $('.topBox')
-}
-
 jQuery(function($){
+  // リロード時にページtopへ
+  $('html,body').animate({ scrollTop: 0 },  { duration: 1500});
+
   // about,themeのfadeIn
   jQuery(window).scroll(function (){
       var elemPos1 = $('.about').offset().top;
@@ -25,5 +24,36 @@ jQuery(function($){
         }
       }
   });
+
+  // movieの文字スライド
+  $("#movieText").ready(function(){  
+    var i = 0;
+    var scroll = function(){
+      $("#movieText").css({
+        'transform':'matrix(1,0,0,1,'+ i +',0)'
+      });
+      i --;
+    }
+    var id = setInterval(function(){
+      scroll();
+      if(i ==　-225){　
+        // clearInterval(id);  
+        i = 0;
+        console.log(i)
+    }}, 15);
+  });
+
+  // 部署長画像(丸)
+  for(var i=3;i<=19;i++){
+    $('.memberImgBox').append('<div class="memberImgDiv"><img src="image/members/'+i+'.png" class="memberImg me'+i+'"></div>')
+    if(i%3==0 || i%3==2){ //左の列と右の列
+
+    }else{ //真ん中の列
+      $('.me'+i).css({
+        'margin-top':'5vh'
+      })
+    }
+  }
+  
 
 });
