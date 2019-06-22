@@ -127,12 +127,6 @@ html,body,main,.sp,.wrap,.top{
   left:46vw;
 }
 
-
-.contents{
-  /* background-color: rgba(255,255,255,.1); */
-}
-
-
 /* 芸工祭とは、テーマ */
 
 /* scrollに合わせたfadeIn */
@@ -297,6 +291,13 @@ html,body,main,.sp,.wrap,.top{
   margin:5vh 0;
   position: relative;
 }
+#tekibusho img{
+  width:15vw;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 5;
+}
 .memberBack{
   width:100%;
 }
@@ -340,4 +341,109 @@ html,body,main,.sp,.wrap,.top{
 }
 .memberImgDiv:last-child img{ /* ジョニー*/
   margin-top: 0px !important;
+}
+
+/* popup */
+.black{
+  width:100vw;
+  height:100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,.5);
+  display: none; 
+  z-index:20;
+}
+.popup{
+  width:96vw;
+  height:40vh;
+  position:fixed;
+  top:30vh;
+  left:2vw;
+  overflow:hidden;
+  background-color: var(--maingreen);
+  display:none;
+  z-index:30;
+  animation:none;
+}
+@keyframes popsIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes popsOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+#close{
+  position: absolute;
+  top:10px;
+  right:10px;
+  z-index: 10;
+  width:15px;
+  height:15px;
+  text-align: center;
+  vertical-align: middle;
+  color: #595757;
+}
+.icon{
+  position: absolute;
+  top:-50%;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.bushocho{
+  position: absolute;
+  top:0;
+  right:0;
+  width:50%;
+  height:100%;
+  object-fit: cover;
+}
+.bushomei{
+  color:white;
+  text-align: left;
+  width:45%;
+  height:10%;
+  background-color: var(--maingray);
+  position: absolute;
+  left:0;
+  bottom:25%;
+  margin: 0 auto;
+  border-bottom:1px solid var(--maingray);
+  padding-left:5%;
+  line-height: 4vh;
+  font-size:2.5vh;
+}
+.name{
+  color:white;
+  text-align: right;
+  width:45%;
+  height:10%;
+  background-color: var(--maingray);
+  position: absolute;
+  left:0;
+  bottom:15%;
+  margin: 0 auto;
+  border-top:1px solid var(--maingray);
+  padding-right:5%;
+  line-height: 4vh;
+  font-size:2.5vh;
 }

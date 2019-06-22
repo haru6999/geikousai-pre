@@ -8,6 +8,7 @@
     <!-- 外部スタイルシートの読み込み -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script src="js/main.js"></script>
     <script src="js/infiniteslide.js"></script>
     <script src="js/jquery.pause.min.js"></script>
@@ -59,7 +60,9 @@
               <div class="box"></div>
               <h2>今年のテーマ</h2>
               <h3>nomnom</h3>
-              <p>装飾に彩られたキャンパス、個性豊かな作品の展示、笑いの溢れるステージ企画に、アイデアたっぷりの模擬店。極め付けはオシャレで美味しい本格カフェ。とにかく見どころ満載で妥協のないこの学祭は芸工生全員で作る一つの作品です！満足間違いなし！</p>           
+              <p>「nom nom」は英語圏で「むしゃむしゃ」の意味で用いられる表現。ナムナムと味わい、楽しみ尽くす最高の時間を過ごしてもらいたい。という思いを込めました。<br>
+                  We are nomnom.<br>
+                  ナムナム味わい尽くせ。</p>           
             </div>
 
             <!-- 線 -->
@@ -84,11 +87,22 @@
 
             <!-- 部署長紹介 -->
             <div class="member">
+              <a href="pre/index.html" id="tekibusho"><img src="image/tekibusho.png"></a>
               <img src="image/memberBack.png" class="memberBack">
               <!-- <img src="image/member2.png" class="member2"> -->
               <div class="memberImgBox">
-                  <div class="memberImgDiv"><img src="image/members/1.png" class="memberImg me1"></div>
-                  <div class="memberImgDiv"><img src="image/members/2.png" class="memberImg me2"></div>
+                  <div class="memberImgDiv"><img src="image/members/1.png" class="memberImg" id="me1"></div>
+                  <div class="memberImgDiv"><img src="image/members/2.png" class="memberImg" id="me2"></div>
+              </div>
+
+              <!-- popup -->
+              <div class="black"></div>
+              <div class="popup">
+                <i class="fas fa-times" id="close"></i>
+                <img src="image/icon/1.png" class="icon">
+                <img src="image/bushocho/1.png" class="bushocho">
+                <p class="bushomei">芸工祭長</p>
+                <p class="name">パッション</p>
               </div>
             </div>
 
