@@ -35,7 +35,7 @@
     width:100%;
     top:300px;
     font-size: 40px;
-    color:white;
+    z-index:10;
   }
   .sp{
     /* display:none; */
@@ -430,7 +430,7 @@ html,body,main,.sp,.wrap,.top{
   border-bottom:1px solid var(--maingray);
   padding-left:5%;
   line-height: 4vh;
-  font-size:2.5vh;
+  font-size:1.9vh;
 }
 .name{
   color:white;
@@ -445,5 +445,5 @@ html,body,main,.sp,.wrap,.top{
   border-top:1px solid var(--maingray);
   padding-right:5%;
   line-height: 4vh;
-  font-size:2.5vh;
+  font-size:2vh;
 }
