@@ -22,6 +22,40 @@
   font-family: 'TsukuARdGothic-Regular',sans-serif;
 }
 
+/* loader */
+.loaderBox{
+  width: 100vw;
+  height:100vh;
+  background-color: var(--mainnavy);
+}
+#loader {
+  width: 100%;
+  height:50%;
+	text-align: center;
+	font-size: 25px;
+  color: #efefef;
+  vertical-align: middle;
+  padding-top:50vh;
+}
+.loading,#load-text{
+  font-family: 'Phenomena-Bold';
+  letter-spacing: 3px;
+}
+#bar {
+	width: 80%;
+	height: 2px;
+	border:1px solid #efefef;
+	padding: 1px;
+	margin-top: 10px;
+  font-size: 1px;
+  margin-left:10%;
+}
+#bar span {
+	display: block;
+	width: 0px;
+	height: 2px;
+	background: var(--subpink);
+}
 
 /* pc画面での表示*/
 @media screen and (min-width:480px) {
@@ -445,5 +479,5 @@ html,body,main,.sp,.wrap,.top{
   border-top:1px solid var(--maingray);
   padding-right:5%;
   line-height: 4vh;
-  font-size:2vh;
+  font-size:3.5vh;
 }

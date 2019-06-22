@@ -1,15 +1,65 @@
-jQuery(function($){
-  // リロード時にページtopへ
-  $('.contents').css({
-    'display':'none'
-  });
-  $('html,body').animate({ scrollTop: 0 },  { duration: 1500});
-  setTimeout(function(){
-    $('.contents').css({
-      'display':'block'
-    });
-  },1000);
+$(function() {
+	Array.prototype.remove = function(element) {
+	  for (var i = 0; i < this.length; i++)
+	    if (this[i] == element) this.splice(i,1); 
+	};
 
+	function preload(images, progress) {
+		var total = images.length;
+	    $(images).each(function(){
+			var src = this;
+	        $('<img/>')
+				.attr('src', src)
+				.load(function() {
+					images.remove(src);
+					progress(total, total - images.length);
+				});
+	    });
+	}
+	
+	var now_percent = 0;
+  var displaying_percent= 0;
+  for(var i=1;i<=19;i++){
+    preload([
+      'image/top.png',
+      'image/bushocho/'+i+'.png',
+      'image/icon/'+i+'.png'
+    ], function(total, loaded){
+      now_percent = Math.ceil(100 * loaded / total);
+    });
+  }
+
+	var timer = window.setInterval(function() {
+		if (displaying_percent >= 100) {
+			window.clearInterval(timer);
+			$('#loader').fadeOut('slow', function() {
+        $('.loaderBox').hide();
+        $('#content').show();
+        // リロード時にページtopへ
+        $('.contents').css({
+          'display':'none'
+        });
+        $('html,body').animate({ scrollTop: 0 },  { duration: 1500});
+        setTimeout(function(){
+          $('.contents').css({
+            'display':'block'
+          });
+        },1000);
+			});
+		} else {
+			if (displaying_percent < now_percent) {
+				displaying_percent++;
+				$('#load-text').html(displaying_percent + '%');
+				$('#bar span').css('width', displaying_percent + '%');
+			}
+		}
+	}, 
+	20);
+
+});
+
+
+jQuery(window).on('load', function() {
   // about,themeのfadeIn
   setTimeout(function(){
     jQuery(window).scroll(function (){
@@ -180,7 +230,7 @@ jQuery(function($){
       break;
       case "14":
         $('.bushomei').text('ワークショップ部署長');
-        $('.name').text('枝豆納豆二人セゾン');
+        $('.name').text('セゾン');
       break;
       case "15":
         $('.bushomei').text('昼ステ長');

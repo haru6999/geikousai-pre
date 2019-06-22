@@ -9,111 +9,121 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- 外部スタイルシートの読み込み -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <script src="js/main.js"></script>
-    <script src="js/infiniteslide.js"></script>
-    <script src="js/jquery.pause.min.js"></script>
+    
   </head>
   <body>
     <main>
-      <!-- pc画面での表示 -->
-      <div class="pc">
-        <p>スマートフォンでご覧ください。</p>
+      <!-- loader -->
+      <div class="loaderBox">
+        <div id="loader">
+          <span class="loading">Loading  </span><span id="load-text">0%</span>
+          <div id="bar"><span></span></div>
+        </div>
       </div>
-      <!-- sp画面での表示 -->
-      <div class="sp">
-        <div class="wrap">
+      <div id="content" style="display: none;">
 
-          <div class="top">
-            <div class="topBox">
-              <div class="maruImg">
-                <img src="image/1.png" class="maru" id="maru1">
-                <img src="image/2.png" class="maru" id="maru2">
-                <img src="image/3.png" class="maru" id="maru3">
-                <img src="image/4.png" class="maru" id="maru4">
-                <img src="image/5.png" class="maru" id="maru5">
-                <img src="image/6.png" class="maru" id="maru6">
-                <img src="image/7.png" class="maru" id="maru7">
-                <img src="image/8.png" class="maru" id="maru8">
-              </div>
-              <!-- <img src="image/top2.png" class="top2">  -->
-              <img src="image/top.png" class="topImg"> 
-            </div>
-          </div>
+        <!-- pc画面での表示 -->
+        <div class="pc">
+          <p>スマートフォンでご覧ください。</p>
+        </div>
+        <!-- sp画面での表示 -->
+        <div class="sp">
+          <div class="wrap">
 
-          
-
-          <div class="contents">
-            <!-- 線 -->
-            <div class="line line1"></div>
-
-            <!-- 芸工祭とは -->
-            <div class="about toRight">
-              <img src="image/aboutImg.png">
-              <div class="box"></div>
-              <h2>芸工祭とは</h2>
-              <p>装飾に彩られたキャンパス、個性豊かな作品の展示、笑いの溢れるステージ企画に、アイデアたっぷりの模擬店。極め付けはオシャレで美味しい本格カフェ。とにかく見どころ満載で妥協のないこの学祭は芸工生全員で作る一つの作品です！満足間違いなし！</p>
-            </div>
-
-            <!-- テーマ -->
-            <div class="theme toLeft">
-              <img src="image/themeImg.png">
-              <div class="box"></div>
-              <h2>今年のテーマ</h2>
-              <h3>nomnom</h3>
-              <p>「nom nom」は英語圏で「むしゃむしゃ」の意味で用いられる表現。ナムナムと味わい、楽しみ尽くす最高の時間を過ごしてもらいたい。という思いを込めました。<br>
-                  We are nomnom.<br>
-                  ナムナム味わい尽くせ。</p>           
-            </div>
-
-            <!-- 線 -->
-            <div class="line line2"></div>
-
-            <!-- movie -->
-            <div class="movie">
-              <div class="movie1">
-                <video src="image/comceptweb.mp4" autoplay muted></video>
-              </div>
-              <div class="movie2">
-                <video src="image/comceptweb.mp4" autoplay muted class="movie2"></video>
-              </div>
-              <div class="text">
-                <p id="movieText">movie　movie　movie　</p>
+            <div class="top">
+              <div class="topBox">
+                <div class="maruImg">
+                  <img src="image/1.png" class="maru" id="maru1">
+                  <img src="image/2.png" class="maru" id="maru2">
+                  <img src="image/3.png" class="maru" id="maru3">
+                  <img src="image/4.png" class="maru" id="maru4">
+                  <img src="image/5.png" class="maru" id="maru5">
+                  <img src="image/6.png" class="maru" id="maru6">
+                  <img src="image/7.png" class="maru" id="maru7">
+                  <img src="image/8.png" class="maru" id="maru8">
+                </div>
+                <!-- <img src="image/top2.png" class="top2">  -->
+                <img src="image/top.png" class="topImg"> 
               </div>
             </div>
+
             
-            <!-- 線 -->
-            <div class="line line3"></div>
 
+            <div class="contents">
+              <!-- 線 -->
+              <div class="line line1"></div>
 
-            <!-- 部署長紹介 -->
-            <div class="member">
-              <a href="chart/index.html" id="tekibusho"><img src="image/tekibusho.png"></a>
-              <img src="image/memberBack.png" class="memberBack">
-              <!-- <img src="image/member2.png" class="member2"> -->
-              <div class="memberImgBox">
-                  <div class="memberImgDiv"><img src="image/members/1.png" class="memberImg" id="me1"></div>
-                  <div class="memberImgDiv"><img src="image/members/2.png" class="memberImg" id="me2"></div>
+              <!-- 芸工祭とは -->
+              <div class="about toRight">
+                <img src="image/aboutImg.png">
+                <div class="box"></div>
+                <h2>芸工祭とは</h2>
+                <p>装飾に彩られたキャンパス、個性豊かな作品の展示、笑いの溢れるステージ企画に、アイデアたっぷりの模擬店。極め付けはオシャレで美味しい本格カフェ。とにかく見どころ満載で妥協のないこの学祭は芸工生全員で作る一つの作品です！満足間違いなし！</p>
               </div>
 
-              <!-- popup -->
-              <div class="black"></div>
-              <div class="popup">
-                <i class="fas fa-times" id="close"></i>
-                <img src="image/icon/1.png" class="icon">
-                <img src="image/bushocho/1.png" class="bushocho">
-                <p class="bushomei">芸工祭長</p>
-                <p class="name">パッション</p>
+              <!-- テーマ -->
+              <div class="theme toLeft">
+                <img src="image/themeImg.png">
+                <div class="box"></div>
+                <h2>今年のテーマ</h2>
+                <h3>nomnom</h3>
+                <p>「nom nom」は英語圏で「むしゃむしゃ」の意味で用いられる表現。ナムナムと味わい、楽しみ尽くす最高の時間を過ごしてもらいたい。という思いを込めました。<br>
+                    We are nomnom.<br>
+                    ナムナム味わい尽くせ。</p>           
               </div>
+
+              <!-- 線 -->
+              <div class="line line2"></div>
+
+              <!-- movie -->
+              <div class="movie">
+                <div class="movie1">
+                  <video src="image/comceptweb.mp4" autoplay muted></video>
+                </div>
+                <div class="movie2">
+                  <video src="image/comceptweb.mp4" autoplay muted class="movie2"></video>
+                </div>
+                <div class="text">
+                  <p id="movieText">movie　movie　movie　</p>
+                </div>
+              </div>
+              
+              <!-- 線 -->
+              <div class="line line3"></div>
+
+
+              <!-- 部署長紹介 -->
+              <div class="member">
+                <a href="chart/index.html" id="tekibusho"><img src="image/tekibusho.png"></a>
+                <img src="image/memberBack.png" class="memberBack">
+                <!-- <img src="image/member2.png" class="member2"> -->
+                <div class="memberImgBox">
+                    <div class="memberImgDiv"><img src="image/members/1.png" class="memberImg" id="me1"></div>
+                    <div class="memberImgDiv"><img src="image/members/2.png" class="memberImg" id="me2"></div>
+                </div>
+
+                <!-- popup -->
+                <div class="black"></div>
+                <div class="popup">
+                  <i class="fas fa-times" id="close"></i>
+                  <img src="image/icon/1.png" class="icon">
+                  <img src="image/bushocho/1.png" class="bushocho">
+                  <p class="bushomei">芸工祭長</p>
+                  <p class="name">パッション</p>
+                </div>
+              </div>
+
+              <!-- 線 -->
+              <div class="line line4"></div>
+
             </div>
-
-            <!-- 線 -->
-            <div class="line line4"></div>
-
           </div>
         </div>
       </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
