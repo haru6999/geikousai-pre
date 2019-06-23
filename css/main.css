@@ -11,15 +11,15 @@
 /* font */
 @font-face {
   font-family: 'Phenomena-Bold';
-  src:url('../font/Phenomena-Bold.ttf');
+  src:url('../fonts/Phenomena-Bold.woff');
 }
 @font-face {
   font-family: 'Phenomena-Regular';
-  src:url('../font/Phenomena-Regular.ttf');
+  src:url('../fonts/Phenomena-Regular.ttf');
 }
 
 *{
-  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  /* font-family:'Phenomena-Bold','arial black','TsukuARdGothic-Regular','Hiragino Kaku Gothic ProN',sans-serif; */
 }
 
 /* loader */
@@ -30,15 +30,15 @@
 }
 #loader {
   width: 100%;
-  height:50%;
+  height:52%;
 	text-align: center;
 	font-size: 25px;
   color: #efefef;
   vertical-align: middle;
-  padding-top:50vh;
+  padding-top:48vh;
 }
 .loading,#load-text{
-  font-family: 'Phenomena-Bold';
+  font-family: 'Phenomena-Bold',sans-serif;
   letter-spacing: 3px;
 }
 #bar {
@@ -49,6 +49,7 @@
 	margin-top: 10px;
   font-size: 1px;
   margin-left:10%;
+  border-radius: 10px;
 }
 #bar span {
 	display: block;
@@ -70,6 +71,7 @@
     top:300px;
     font-size: 40px;
     z-index:10;
+    font-family : "TsukuARdGothic-Regular",sans-serif;
   }
   .sp{
     /* display:none; */
@@ -234,17 +236,18 @@ html,body,main,.sp,.wrap,.top{
   letter-spacing: 2.5px;
   margin:12px 20px 20px 20px;
   margin-left:calc((8% - 5px)/2 + 20px) !important;
+  font-family : "TsukuARdGothic-Regular",sans-serif;
 }
 .about h2,.theme h2{
   font-size: 20px;
   margin: 10px 0px 5px 0;
-  font-family : "tsukushi","sans-serif";
+  font-family : "TsukuARdGothic-Regular",sans-serif;
   margin-top:20px;
   margin-left:calc((8% - 5px)/2);
 }
 .theme h3{
   margin:0;
-  font-family: 'Phenomena-Bold',"sans-serif";
+  font-family: "Phenomena-Bold",sans-serif;
   font-size: 30px;
   margin-left:calc((8% - 5px)/2);
 }
@@ -314,7 +317,7 @@ html,body,main,.sp,.wrap,.top{
   color:white;
   font-size: 70px;
   margin: 0;
-  font-family: 'Phenomena-Bold';
+  font-family: "Phenomena-Bold",sans-serif;
   letter-spacing: 3px;
 }
 
@@ -465,6 +468,7 @@ html,body,main,.sp,.wrap,.top{
   padding-left:5%;
   line-height: 4vh;
   font-size:1.9vh;
+  font-family : "TsukuARdGothic-Regular",sans-serif;
 }
 .name{
   color:white;
@@ -480,4 +484,5 @@ html,body,main,.sp,.wrap,.top{
   padding-right:5%;
   line-height: 4vh;
   font-size:3.5vh;
+  font-family : "TsukuARdGothic-Regular",sans-serif;
 }
