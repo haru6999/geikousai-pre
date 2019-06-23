@@ -88,19 +88,26 @@ jQuery(window).on('load', function() {
   // movieの文字スライド
   $("#movieText").ready(function(){  
     var i = 0;
+    var windowHeight = $(window).height();
     var slide = function(){
       $("#movieText").css({
         'transform':'matrix(1,0,0,1,'+ i +',0)'
       });
       i --;
     }
-    setInterval(function(){
+    var id = setInterval(function(){
       slide();
-      if(i ==　-225){　
+      if(windowHeight==667 && i ==　-218){　//iphone6/7/8
         // clearInterval(id);  
         i = 0;
-        console.log(i)
-    }}, 15);
+      }else if(windowHeight==568 && i ==　-188){　//iphone5/SE
+        // clearInterval(id);  
+        i = 0;
+      }else if(windowHeight==812 && i ==　-257){　//iphone6/7/8
+        // clearInterval(id);  
+        i = 0;
+      }
+    }, 15);
   });
 
   // 部署長画像(丸)
