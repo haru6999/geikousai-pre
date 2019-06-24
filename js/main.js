@@ -89,7 +89,7 @@ jQuery(window).on('load', function() {
     var aa = 150*elemPos4/elemPos4Init ;
     if(elemPos4>=0){ //スクロールし始めから.topImgが隠れるまで
       $('.maru').css({
-        'transform': 'scale(0.12) translate(0,'+aa+'vh)'
+        'transform': 'scale(0.12) translate(0,calc(5vh + '+aa+'vh))'
       })
       // console.log("bb")
     }else if(elemPos4<0){
@@ -108,31 +108,37 @@ jQuery(window).on('load', function() {
   });
 
 
-  var j = 1;
-  var t1 = -2.3;
-  var T1 =t1;
-  var l1 = 45;
-  var t2 = -1.2;
-  var l2 = 36;
-  var t3 = 3.4;
-  var l3 = 42.4;
-  var t4 = 0.9;
-  var l4 = 40.4;
-  var t5 = 4.5;
-  var l5 = 35.5;
-  var t6 = 10;
-  var l6 = 50;
-  var t7 = 11.4;
-  var l7 = 44.3;
-  var t8 = 13;
-  var l8 = 46;
+  // var j = 1;
+  // var t1 = -2.3;
+  // var T1 =t1;
+  // var l1 = 45;
+  // var t2 = -1.2;
+  // var l2 = 36;
+  // var t3 = 3.4;
+  // var l3 = 42.4;
+  // var t4 = 0.9;
+  // var l4 = 40.4;
+  // var t5 = 4.5;
+  // var l5 = 35.5;
+  // var t6 = 10;
+  // var l6 = 50;
+  // var t7 = 11.4;
+  // var l7 = 44.3;
+  // var t8 = 13;
+  // var l8 = 46;
 
-    T1 -= j;
-    if(T1<(-2.3)){
-      T1 = 15.7;
-    }
-    console.log(T1);
-    $('#maru1').animate({ top: T1+'vh',left:l1+'vw'},{ duration:100})
+  //   T1 -= j;
+  //   if(T1<(-2.3)){
+  //     T1 = 15.7;
+  //   }
+  //   console.log(T1);
+  //   $('#maru1').animate({
+  //     if(T1<(-2.3)){
+  //       T1 = 15.7;
+  //     }
+  //     top: T1+'vh',
+  //     left:l1+'vw'
+  //   },{ duration:100})
 
   // movieの文字スライド
   $("#movieText").ready(function(){  

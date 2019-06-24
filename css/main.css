@@ -126,10 +126,9 @@ html,body,main,.sp,.wrap,.top{
   width:20%;
   height:18vh;
   margin-left: 40%;
-  background-color: rgba(255,255,255,.5);
 }
 .maru{
-  transform: scale(0.12) translate(0,150vh);
+  transform: scale(0.12) translate(0,155vh);
   position: absolute;
   z-index: -5;
 }
