@@ -87,6 +87,36 @@ jQuery(window).on('load', function() {
 
     // maru
     var aa = 150*elemPos4/elemPos4Init ;
+    setTimeout(function(){
+      $('#maru1').css({
+        'animation': 'maru01 4s infinite linear'
+      })
+      $('#maru3').css({
+        'animation': 'maru03 4s infinite linear'
+      })
+      $('#maru6').css({
+        'animation': 'maru06 4s infinite linear'
+      })
+      $('#maru8').css({
+        'animation': 'maru08 4s infinite linear'
+      })
+
+    },0);
+    setTimeout(function(){
+      $('#maru2').css({
+        'animation': 'maru02 4s infinite linear'
+      })
+      $('#maru4').css({
+        'animation': 'maru04 4s infinite linear'
+      })
+      $('#maru5').css({
+        'animation': 'maru05 4s infinite linear'
+      })
+      $('#maru7').css({
+        'animation': 'maru07 4s infinite linear'
+      })
+      
+    },2000);
     if(elemPos4>=0){ //スクロールし始めから.topImgが隠れるまで
       $('.maru').css({
         'transform': 'scale(0.12) translate(0,calc(5vh + '+aa+'vh))'
@@ -96,54 +126,14 @@ jQuery(window).on('load', function() {
       $('.maru').css({
         'transform': 'scale(0.12) translate(0,0)'
       })
-    }
-    
-    for(var i=1;i<=8;i++){
-      if(scroll>0){
-        $('#maru'+i).css({
-          // 'animation': 'maru'+i+' 3s infinite linear'
-        });
-      }
     }    
   });
 
 
-  // var j = 1;
-  // var t1 = -2.3;
-  // var T1 =t1;
-  // var l1 = 45;
-  // var t2 = -1.2;
-  // var l2 = 36;
-  // var t3 = 3.4;
-  // var l3 = 42.4;
-  // var t4 = 0.9;
-  // var l4 = 40.4;
-  // var t5 = 4.5;
-  // var l5 = 35.5;
-  // var t6 = 10;
-  // var l6 = 50;
-  // var t7 = 11.4;
-  // var l7 = 44.3;
-  // var t8 = 13;
-  // var l8 = 46;
-
-  //   T1 -= j;
-  //   if(T1<(-2.3)){
-  //     T1 = 15.7;
-  //   }
-  //   console.log(T1);
-  //   $('#maru1').animate({
-  //     if(T1<(-2.3)){
-  //       T1 = 15.7;
-  //     }
-  //     top: T1+'vh',
-  //     left:l1+'vw'
-  //   },{ duration:100})
-
   // movieの文字スライド
   $("#movieText").ready(function(){  
     var i = 0;
-    var windowHeight = $(window).height();
+    var windowWidth = $(window).width();
     var slide = function(){
       $("#movieText").css({
         'transform':'matrix(1,0,0,1,'+ i +',0)'
@@ -152,15 +142,7 @@ jQuery(window).on('load', function() {
     }
     var id = setInterval(function(){
       slide();
-      if(windowHeight==667 && i ==　-218){　//iphone6/7/8
-        // clearInterval(id);  
-        i = 0;
-      }
-      if(windowHeight==568 && i ==　-188){　//iphone5/SE
-        // clearInterval(id);  
-        i = 0;
-      }
-      if(windowHeight==812 && i ==　-257){　//iphone6/7/8
+      if(i ==　-224){　
         // clearInterval(id);  
         i = 0;
       }
