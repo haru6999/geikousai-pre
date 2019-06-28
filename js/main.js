@@ -149,6 +149,21 @@ jQuery(window).on('load', function() {
     }, 15);
   });
 
+  // movie loop
+  var video1 = document.getElementById("movie1"); 
+  //this did the trick
+  video1.loop = false; 
+  video1.addEventListener('ended', function() { 
+    video1.currentTime=0.1; video1.play(); }, false);
+  video1.play();
+
+  var video2 = document.getElementById("movie2"); 
+  //this did the trick
+  video2.loop = false; 
+  video2.addEventListener('ended', function() { 
+    video2.currentTime=0.1; video2.play(); }, false);
+  video2.play();
+
   // 部署長画像(丸)
   for(var i=3;i<=19;i++){
     $('.memberImgBox').append('<div class="memberImgDiv"><img src="image/members/'+i+'.png" class="memberImg" id="me'+i+'"></div>')
