@@ -9,26 +9,26 @@
     <!-- スマホ画面の表示 -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- 外部スタイルシートの読み込み -->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="css/pc.css" media="(min-width:480px)" rel="stylesheet" type="text/css">
+    <link href="css/main.css" media="(max-width:480px)" rel="stylesheet" type="text/css">
     
   </head>
   <body>
     <main>
       <!-- loader -->
-      <div class="loaderBox">
+      <!-- <div class="loaderBox">
         <div id="loader">
           <span class="loading">Loading  </span><span id="load-text">0%</span>
           <div id="bar"><span></span></div>
         </div>
       </div>
-      <div id="content" style="display: none;">
+      <div id="content" style="display: none;"> -->
 
         <!-- pc画面での表示 -->
-        <div class="pc">
+        <!-- <div class="pc">
           <p>スマートフォンでご覧ください。</p>
-        </div>
+        </div> -->
         <!-- sp画面での表示 -->
         <div class="sp">
           <div class="wrap">
@@ -81,11 +81,11 @@
               <!-- movie -->
               <div class="movieBox">
                 <div class="movie">
-                  <video src="image/comceptweb.mp4" playsinline muted autoplay loop id="movie1"></video>
+                  <a href="https://youtu.be/daNqSakYFv0" target="_blank"><video src="image/comceptweb.mp4" playsinline muted autoplay loop id="movie1"></video></a>
                   <div class="text">
                     <p id="movieText">movie　movie　movie　</p>
                   </div>
-                  <video src="image/choushoukai.mp4" playsinline muted autoplay loop id="movie2"></video>
+                  <a href="https://youtu.be/6yrk83nMaVY" target="_blank"><video src="image/choushoukai.mp4" playsinline muted autoplay loop id="movie2"></video></a>
                 </div>
                 
               </div>

@@ -1,0 +1,340 @@
+@import "color";
+
+
+.top{
+    width:100vw;
+    height:95vh;
+    position: fixed;
+    top:0;
+    left:0;
+    // padding-top: 20vh;
+    padding-bottom: 5vh;
+    z-index: -10;
+    background-color: $mainnavy;    
+
+    .topBox{
+        width:100%;
+        height:100%;
+        position: relative;
+        animation:fadeIn 4s ease-out;
+        @keyframes fadeIn{
+            0%{opacity:0;}
+            100%{opacity:1;}
+        }
+
+        .maruImg{
+            width:20%;
+            height:40vh;
+            margin-left: 40%;
+            .maru{
+                transform: scale(0.12) translate(0,155vh);
+                position: absolute;
+                z-index: -5;
+            }
+            #maru1{
+                top:-2.3vh;
+                left:45vw;
+            }
+            #maru2{
+                top:-1.2vh;
+                left:36vw;
+                animation:opa0 100s;
+            }
+            #maru3{
+                top:3.4vh;
+                left:42.4vw;
+            }
+            #maru4{
+                top:0.9vh;
+                left:40.4vw;
+                animation:opa0 100s;
+            }
+            #maru5{
+                top:4.5vh;
+                left:35.5vw;
+                animation:opa0 100s;
+            }
+            #maru6{
+                top:10vh;
+                left:50vw;
+            }
+            #maru7{
+                top:11.4vh;
+                left:44.3vw;
+                animation:opa0 100s;
+            }
+            #maru8{
+                top:13vh;
+                left:46vw;
+            }
+            @keyframes opa0{
+                0%{opacity: 0;}
+                99%{opacity: 0;}
+                100%{opacity: 0.1;}
+            }
+            @keyframes maru01{
+                0%{top:13vh;
+                left: 45vw;
+                opacity: 0;}
+                25%{top:9vh;
+                    left:47vw;
+                    opacity: 0.5;}
+                50%{top:5vh;
+                    left:43vw;
+                    opacity: 1;}
+                75%{top:1vh;
+                    left:47vw;
+                    opacity: 0.5;}
+                100%{top:-3.0vh;
+                    left:43vw;
+                    opacity: 0;}
+            }
+            @keyframes maru02{
+                0%{top:13vh;
+                left: 36vw;
+                opacity: 0;}
+                25%{top:9vh;
+                    left:34vw;
+                    opacity: 0.5;}
+                50%{top:5vh;
+                    left:38vw;
+                    opacity: 1;}
+                75%{top:1vh;
+                    left:34vw;
+                    opacity: 0.5;}
+                100%{top:-3.0vh;
+                    left:38vw;
+                    opacity: 0;}
+            }
+            @keyframes maru03{
+                0%{top:13vh;
+                left: 42.4vw;
+                opacity: 0;}
+                25%{top:9vh;
+                    left:40.4vw;
+                    opacity: 0.5;}
+                50%{top:5vh;
+                    left:44.4vw;
+                    opacity: 1;}
+                75%{top:1vh;
+                    left:40.4vw;
+                    opacity: 0.5;}
+                100%{top:-3.0vh;
+                    left:44.4vw;
+                    opacity: 0;}
+            }
+            @keyframes maru04{
+                0%{top:8vh;
+                left: 40.4vw;
+                opacity: 0;}
+                25%{top:4vh;
+                    left:42.4vw;
+                    opacity: 0.5;}
+                50%{top:0vh;
+                    left:38.4vw;
+                    opacity: 1;}
+                75%{top:-4.0vh;
+                    left:42.4vw;
+                    opacity: 0.5;}
+                100%{top:-8.0vh;
+                    left:38.4vw;
+                    opacity: 0;}
+            }
+            @keyframes maru05{
+                0%{top:8vh;
+                left: 35.5vw;
+                opacity: 0;}
+                25%{top:4vh;
+                    left:37.5vw;
+                    opacity: 0.5;}
+                50%{top:0vh;
+                    left:33.5vw;
+                    opacity: 1;}
+                75%{top:-4.0vh;
+                    left:37.5vw;
+                    opacity: 0.5;}
+                100%{top:-8.0vh;
+                    left:32.5vw;
+                    opacity: 0;}
+            }
+            @keyframes maru06{
+                0%{top:17vh;
+                left: 50vw;
+                opacity: 0;}
+                25%{top:11vh;
+                    left:52vw;
+                    opacity: 0.5;}
+                50%{top:5vh;
+                    left:48vw;
+                    opacity: 1;}
+                75%{top:-1vh;
+                    left:52vw;
+                    opacity: 0.5;}
+                100%{top:-7vh;
+                    left:48vw;
+                    opacity: 0;}
+            }
+            @keyframes maru07{
+                0%{top:14vh;
+                left: 40.3vw;
+                opacity: 0;}
+                25%{top:10vh;
+                    left:42.3vw;
+                    opacity: 0.5;}
+                50%{top:6vh;
+                    left:38.3vw;
+                    opacity: 1;}
+                75%{top:2vh;
+                    left:42.3vw;
+                    opacity: 0.5;}
+                100%{top:-2vh;
+                    left:38.3vw;
+                    opacity: 0;}
+            }
+            @keyframes maru08{
+                0%{top:14vh;
+                left: 46vw;
+                opacity: 0;}
+                25%{top:10vh;
+                    left:48vw;
+                    opacity: 0.5;}
+                50%{top:6vh;
+                    left:44vw;
+                    opacity: 1;}
+                75%{top:2vh;
+                    left:48vw;
+                    opacity: 0.5;}
+                100%{top:-2vh;
+                    left:44vw;
+                    opacity: 0;}
+            }
+        }
+
+        .topImg{
+            width:50%;
+            margin-left:25%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    
+}
+
+.contents{
+    position: relative;
+    
+    @mixin details{
+        color:white;
+        text-align: center;
+        width:40%;
+        height:60vh;
+        margin:0 auto;
+        border:solid 1px white;
+        position: relative;
+        margin-top: 20vh;
+        margin-bottom: 80px;
+        float: left;
+    }
+    @mixin detailsImg{
+        width:20%;
+        position: absolute;
+    }
+    @mixin detailsBox{
+        width:100%;
+        height:100%;
+        border:solid 1px white;
+        position:absolute;
+        top:3px;
+        left:5px;
+    }
+    @mixin detailsH2{
+        font-size: 25px;
+        margin: 10px 0px 5px 0;
+        font-family : $font;
+        margin-top:80px;
+        margin-left:calc((8% - 5px)/2);
+    }
+    @mixin detailsP{
+        font-size: 18px;
+        letter-spacing: 2.5px;
+        margin:50px 60px 100px 60px;
+        margin-left:calc((8% - 5px)/2 + 60px) !important;
+        font-family : $font;
+    }
+    
+
+    .about{
+        @include details;
+        background-color: rgba($subblue,.8);
+        margin-left: 5%;
+        opacity: 0;
+        transform: translateX(-100px);
+        transition:all 2s;
+        .LeftToRight {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        img{
+            @include detailsImg; 
+            top:-86px;
+            right:-11px;
+        }
+        .box{
+            @include detailsBox;
+        }
+        h2{
+            @include detailsH2;
+        }
+        p{
+            @include detailsP;
+        }
+    }
+    .theme{
+        @include details;
+        background-color: rgba($subyellow,.9);
+        margin-left: 5%;
+        opacity: 0;
+        transform: translateX(100px);
+        transition:all 2s;
+        .RightToLeft{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        img{
+            @include detailsImg; 
+            top:-86px;
+            right:-11px;
+        }
+        .box{
+            @include detailsBox;
+        }
+        h2{
+            @include detailsH2;
+        }
+        p{
+            @include detailsP;
+        }
+    }
+
+
+    @mixin line{
+        width:90vw;
+        height:1px;
+        border: 1px solid $maingreen;
+        border-radius: 10px;
+        background-color: $maingreen;
+        margin: 0 auto;
+        transform: scale(0);
+    }
+    
+
+    .line1{
+        @include line;
+        margin-top: 100vh;
+    }
+    .lineZoom{
+        transform: scale(1.0);
+        transition:all 1s;
+    }
+
+}
